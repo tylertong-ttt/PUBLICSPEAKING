@@ -1,0 +1,313 @@
+:root {
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent-navy: #1e3a8a;
+  --accent-gold: #d97706;
+  --border-color: #e2e8f0;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  overflow: hidden; /* Chặn cuộn chuột tự do để biến thành presentation slides */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header bar */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--accent-navy);
+}
+
+.logo span {
+  color: var(--accent-gold);
+}
+
+.deck-indicator {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Slide Container */
+.presentation-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 80px 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.98);
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Layouts */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px;
+  max-width: 1300px;
+  width: 100%;
+  align-items: center;
+}
+
+.intro-layout {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Text styles */
+.section-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent-navy);
+  margin-bottom: 12px;
+}
+
+.slide-title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.speaker-name {
+  font-size: 16px;
+  color: var(--accent-gold);
+  margin-bottom: 24px;
+}
+
+.bullet-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bullet-points li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.bullet-points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+  font-weight: bold;
+}
+
+.bullet-points strong {
+  color: var(--text-primary);
+}
+
+/* Visual elements */
+.visual-pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.image-box img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-caption {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 10px 14px;
+  background: #f1f5f9;
+  text-align: center;
+}
+
+/* Card Mockups */
+.card-grid-preview, .timeline-container, .resource-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.metric-card, .step-badge, .res-item, .info-card-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+}
+
+.metric-card.accent {
+  border-left: 5px solid var(--accent-gold);
+}
+
+.checklist-card {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 18px;
+}
+
+.check-row span {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.ratio-box {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 36px;
+  text-align: center;
+  width: 100%;
+}
+
+.ratio-box .number {
+  font-size: 56px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.ratio-box .number.gold {
+  color: var(--accent-gold);
+}
+
+.quote-card {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--accent-navy);
+  border-left: 4px solid var(--accent-gold);
+  padding: 20px 30px;
+}
+
+/* Intro Styles */
+.main-title {
+  font-family: var(--font-heading);
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: var(--accent-navy);
+  margin: 16px 0;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: var(--accent-navy);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Presenter controls */
+.presenter-controls {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.presenter-controls button {
+  background: var(--text-primary);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.presenter-controls button:hover {
+  opacity: 1;
+}
