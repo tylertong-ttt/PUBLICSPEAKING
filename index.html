@@ -3,340 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workshop: Fact, Not Fluff - Gathering Materials</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts: Inter -->
+  <title>Fact, Not Fluff — Note-Taking & Research Workshop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation Bar / Slide Counter -->
+  <!-- Thanh điều hướng & Tiến độ -->
   <header class="top-nav">
-    <div class="logo">PUBLIC SPEAKING • <span>CHAPTER 7</span></div>
-    <div class="deck-indicator">
-      <span id="current-slide">1</span> / <span id="total-slides">13</span>
+    <div class="brand">FACT, NOT FLUFF <span class="tag">SPEECH DECK</span></div>
+    <div class="nav-controls">
+      <div class="slide-indicator">
+        <span id="current-slide">1</span> / <span id="total-slides">3</span>
+      </div>
+      <button class="nav-btn" id="btn-prev" title="Previous (Left Arrow)">❮</button>
+      <button class="nav-btn" id="btn-next" title="Next (Right Arrow / Space)">❯</button>
+      <button class="nav-btn" id="btn-fs" title="Fullscreen (F)">⛶</button>
     </div>
   </header>
 
-  <!-- Slide Wrapper -->
-  <main class="presentation-container">
+  <!-- Container Trình Chiếu -->
+  <main class="deck-container">
 
-    <!-- SLIDE 0: TITLE SLIDE (MC OPENING) -->
-    <section class="slide active" id="slide-0">
-      <div class="slide-content intro-layout">
-        <div class="badge">CHAPTER 7 WORKSHOP</div>
-        <h1 class="main-title">FACT, NOT FLUFF</h1>
-        <p class="subtitle">Gathering Materials with Precision, Authority & Credibility</p>
-        <div class="presenter-meta">
-          <span>Hosted by MC 1 & MC 2</span>
-          <span class="divider">•</span>
-          <span>Time: 30 Mins</span>
+    <!-- SLIDE 1: TÌNH HUỐNG & HOOK (MESSY NOTES = FLUFFY SPEECHES) -->
+    <section class="slide active" id="slide-1">
+      <div class="slide-inner">
+        <div class="content-left">
+          <div class="chapter-badge">PART 5: TIP FOR RESEARCH</div>
+          <h1 class="headline">"Messy Notes = <br><span class="highlight-red">Fluffy Speeches"</span></h1>
+          <p class="presenter-tag">Speaker: <strong>Thế Thuận</strong></p>
+          
+          <div class="reality-check">
+            <div class="stat-pill">⚡ The Memory Trap</div>
+            <p class="dialogue-quote">"I’ll definitely remember this insane stat..."</p>
+            <p class="consequence">➜ 3 days later: Blank slide, lost sources, zero proof.</p>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- SLIDE 1: ÁNH DƯƠNG -->
-    <section class="slide" id="slide-1">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 1: USING OWN KNOWLEDGE</div>
-          <h2 class="slide-title">The Power of Personal Experience</h2>
-          <div class="speaker-name">Speaker: <strong>Ánh Dương</strong></div>
-          <ul class="bullet-points">
-            <li><strong>Self-Query First:</strong> Don't rush into dry statistics before checking your own lived experience.</li>
-            <li><strong>Emotional Hook:</strong> Real stories (e.g. sunsets at Sydney Opera House) transform numbers into real memories.</li>
-            <li><strong>Skillful Blend:</strong> Hard data builds the base; personal touch brings the flavor.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="image-box">
-            <img src="images/anh-duong-sydney.jpg" alt="Sydney Opera House - Practical Experience" onerror="this.src='https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80'">
-            <div class="image-caption">Breathe life into facts with real-world human perspective</div>
+        <div class="content-right">
+          <!-- Trực quan hóa tương phản: Fluff vs Fact -->
+          <div class="comparison-board">
+            <div class="board-column bad">
+              <div class="board-header">❌ THE FLUFF WAY</div>
+              <div class="messy-notes-mockup">
+                <div class="scribble line-1">"Medford - important!!!"</div>
+                <div class="scribble line-2">Some random stat from online...</div>
+                <div class="scribble line-3">No author. No page. Just panic.</div>
+              </div>
+              <span class="board-footer">Wasted Time & Accidental Plagiarism</span>
+            </div>
+
+            <div class="board-column good">
+              <div class="board-header">✔ THE FACT WAY</div>
+              <div class="clean-note-mockup">
+                <div class="mock-tag">TOPIC HEADING</div>
+                <div class="mock-source">Kim, 2018 (p. 131)</div>
+                <div class="mock-fact">"Verified empirical data here..."</div>
+              </div>
+              <span class="board-footer">Instant Recall & Solid Authority</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 2: MAI THẢO -->
+    <!-- SLIDE 2: 3-PART NOTE FORMAT (LÀM RÕ CỤ THỂ QUY TRÌNH 3 PHẦN) -->
     <section class="slide" id="slide-2">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 1: USING OWN KNOWLEDGE</div>
-          <h2 class="slide-title">The Balance: Outside Info vs. Personal Touch</h2>
-          <div class="speaker-name">Speaker: <strong>Mai Thảo</strong></div>
-          <ul class="bullet-points">
-            <li><strong>The Trap:</strong> Solely outside data creates cold disconnection; purely personal stories lack factual weight.</li>
-            <li><strong>Symbiosis:</strong> Facts provide the core information; your personal lens supplies human interest and color.</li>
-            <li><strong>Key Takeaway:</strong> Never pick one over the other—harmonize both.</li>
+      <div class="slide-inner">
+        <div class="content-left">
+          <div class="chapter-badge">CORE HABIT #2</div>
+          <h2 class="headline">The 3-Part Layout</h2>
+          <p class="sub-headline">Một định dạng chuẩn chỉnh duy nhất cho mọi tài liệu ghi chép.</p>
+          
+          <ul class="rule-list">
+            <li>
+              <span class="num">01</span>
+              <div>
+                <strong>Subject Tag (Thẻ chủ đề):</strong> Nhìn lướt qua trong 2 giây biết ngay nội dung, ghép nối bài nói thần tốc.
+              </div>
+            </li>
+            <li>
+              <span class="num">02</span>
+              <div>
+                <strong>Abbreviated Source (Nguồn vắn tắt):</strong> Tên tác giả + năm/trang. Chi tiết lưu ở Preliminary Bibliography.
+              </div>
+            </li>
+            <li>
+              <span class="num">03</span>
+              <div>
+                <strong>The Core Fact / Quote:</strong> Nội dung chắt lọc hoặc số liệu đã đóng ngoặc kép cẩn thận.
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="visual-pane">
-          <div class="card-grid-preview">
-            <div class="metric-card">
-              <span class="icon">📊</span>
-              <h3>Outside Information</h3>
-              <p>Credibility, facts, structure & proof</p>
+
+        <div class="content-right">
+          <!-- GIAO DIỆN INDEX CARD ĐƯỢC THIẾT KẾ TRỰC TIẾP BẰNG HTML/CSS -->
+          <div class="interactive-index-card">
+            <div class="card-pin"></div>
+            
+            <!-- Phần 1: Subject Tag -->
+            <div class="card-part part-tag">
+              <span class="part-indicator">PART 1: TOPIC TAG</span>
+              <div class="tag-content">GLOBAL FLU PANDEMIC</div>
             </div>
-            <div class="metric-card accent">
-              <span class="icon">✨</span>
-              <h3>Personal Touch</h3>
-              <p>Color, emotion, relatability & engagement</p>
+
+            <!-- Phần 2: Source -->
+            <div class="card-part part-source">
+              <span class="part-indicator">PART 2: ABBREVIATED SOURCE</span>
+              <div class="source-content">J. Joseph Kim, "Next Pandemic Flu Virus"</div>
+            </div>
+
+            <!-- Phần 3: Fact/Quote -->
+            <div class="card-part part-fact">
+              <span class="part-indicator">PART 3: THE FACT / DIRECT QUOTE</span>
+              <blockquote class="fact-content">
+                “The occurrences of flu pandemics which can kill millions... is a certainty. So the question is not if they will occur, but <strong>when</strong>.”
+              </blockquote>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 3: TÚ QUYÊN -->
+    <!-- SLIDE 3: 4 NGUYÊN TẮC CỐT LÕI (4 PRINCIPLES GRID) -->
     <section class="slide" id="slide-3">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 1: CASE STUDY</div>
-          <h2 class="slide-title">Textbook Example & Real Insight</h2>
-          <div class="speaker-name">Speaker: <strong>Tú Quyên</strong></div>
-          <ul class="bullet-points">
-            <li><strong>National Parks Speech:</strong> Combined official visitor count & economic data with firsthand conservation work.</li>
-            <li><strong>Practical Details:</strong> Helping real families, hikers, and fishermen created an authentic, unforgettable narrative.</li>
-            <li><strong>Takeaway:</strong> Real knowledge is your greatest supporting material.</li>
-          </ul>
+      <div class="slide-inner wide-layout">
+        <div class="center-title-box">
+          <div class="chapter-badge">SUMMARY RULESET</div>
+          <h2 class="headline-center">Four Principles for Bulletproof Research</h2>
         </div>
-        <div class="visual-pane">
-          <div class="image-box">
-            <img src="images/tu-quyen-national-park.jpg" alt="Great Smoky Mountains National Park Case Study" onerror="this.src='https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1200&q=80'">
-            <div class="image-caption">Case Study: U.S. National Parks presentation</div>
+
+        <div class="principles-grid">
+          <!-- Block 1 -->
+          <div class="p-card">
+            <div class="p-icon">📝</div>
+            <div class="p-step">01</div>
+            <h3>Over-note</h3>
+            <p>Đừng tin vào trí nhớ tức thời. Nếu có 5% khả năng cần dùng đến, hãy ghi chép lại ngay lập tức.</p>
+          </div>
+
+          <!-- Block 2 -->
+          <div class="p-card highlighted">
+            <div class="p-icon">🏷️</div>
+            <div class="p-step">02</div>
+            <h3>3-Part Format</h3>
+            <p>Thẻ chủ đề (Tag) + Nguồn vắn tắt + Dữ liệu. Quét 20 thẻ trong 5 giây mà không cần đọc lại bài gốc.</p>
+          </div>
+
+          <!-- Block 3 -->
+          <div class="p-card">
+            <div class="p-icon">🧱</div>
+            <div class="p-step">03</div>
+            <h3>One Idea = One Note</h3>
+            <p>Mỗi thẻ là một khối Lego độc lập. Dễ dàng sắp xếp, đổi thứ tự dàn ý khi xây dựng bài thuyết trình.</p>
+          </div>
+
+          <!-- Block 4 -->
+          <div class="p-card">
+            <div class="p-icon">❝❞</div>
+            <div class="p-step">04</div>
+            <h3>Draw The Line</h3>
+            <p>Tách biệt rạch ròi ý kiến cá nhân và trích dẫn gốc. Đóng ngoặc kép ngay để triệt tiêu đạo văn vô thức.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 4: TẤN NHẤT -->
-    <section class="slide" id="slide-4">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 2: LIBRARY RESEARCH</div>
-          <h2 class="slide-title">Librarians & The Catalogue</h2>
-          <div class="speaker-name">Speaker: <strong>Tấn Nhất</strong></div>
-          <ul class="bullet-points">
-            <li><strong>Stop Aimless Wandering:</strong> Never hesitate to consult librarians—they are trained research navigators.</li>
-            <li><strong>The Catalogue Key:</strong> Identify titles, check availability, and grab the vital Call Number.</li>
-            <li><strong>Efficiency:</strong> Pinpoint exact stack shelves instead of browsing blindly.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="info-card-panel">
-            <div class="tag-badge">THE RESEARCH KEY</div>
-            <div class="code-banner">CALL NUMBER: BF468 P57 2017</div>
-            <p>Direct path to shelves • Zero wasted time • No fluff</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 5: ÁNH THƯ -->
-    <section class="slide" id="slide-5">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 2: LIBRARY RESEARCH</div>
-          <h2 class="slide-title">Databases & Reference Works</h2>
-          <div class="speaker-name">Speaker: <strong>Ánh Thư</strong></div>
-          <ul class="bullet-points">
-            <li><strong>The Abstract Trap:</strong> Abstracts are merely summaries written by third parties. Never cite on abstracts alone!</li>
-            <li><strong>Academic Databases:</strong> Unlock peer-reviewed full articles via ProQuest, JSTOR, or Google Scholar.</li>
-            <li><strong>Reference Works:</strong> Encyclopedias for depth, yearbooks for figures, biographical aids for people.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="rule-box-danger">
-            <span class="warning-title">⚠️ THE GOLDEN RULE</span>
-            <h3>Always Consult the Full Article</h3>
-            <p>Skimming summaries produces shallow fluff. Real speeches cite primary, verified full texts.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 6: DQ (SEARCH SMARTER) -->
-    <section class="slide" id="slide-6">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 3: SEARCHING THE INTERNET</div>
-          <h2 class="slide-title">Search Smarter, Not Harder</h2>
-          <div class="speaker-name">Speaker: <strong>Dương Quỳnh (DQ)</strong></div>
-          <ul class="bullet-points">
-            <li><strong>Step 1:</strong> Avoid broad queries like "social media" (millions of messy results).</li>
-            <li><strong>Step 2:</strong> Use targeted queries: "effects of social media on student concentration".</li>
-            <li><strong>Step 3:</strong> Filter by precise sources: News for recency, Books for in-depth theory.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="image-box">
-            <img src="images/dq-search-smarter.png" alt="Search Smarter Demo" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=STEP+2:+Search+Smarter+With+Keywords'">
-            <div class="image-caption">Specific Keywords = Clean Results</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 7: THANH THUYỀN -->
-    <section class="slide" id="slide-7">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 3: SPECIALIZED RESOURCES</div>
-          <h2 class="slide-title">Government Sites & Wikipedia</h2>
-          <div class="speaker-name">Speaker: <strong>Thanh Thuyền</strong></div>
-          <ul class="bullet-points">
-            <li><strong>High-Trust Portals:</strong> USA.gov, Census.gov, and CIA World Factbook give verified raw data.</li>
-            <li><strong>Wikipedia Myth:</strong> Not junk, but never your destination.</li>
-            <li><strong>The Pro Move:</strong> Use Wikipedia as a quick launchpad; scroll straight to the footnotes & citations.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="resource-tiles">
-            <div class="res-item">🏛️ USA.gov & Census.gov</div>
-            <div class="res-item">🌐 CIA World Factbook</div>
-            <div class="res-item highlight">📖 Wikipedia: Jump to References List</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 8: YẾN KHOA -->
-    <section class="slide" id="slide-8">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 3: EVALUATION CRITERIA</div>
-          <h2 class="slide-title">Authorship, Sponsorship, Recency</h2>
-          <div class="speaker-name">Speaker: <strong>Yến Khoa</strong></div>
-          <ul class="bullet-points">
-            <li><strong>Authorship:</strong> Is the writer clearly stated? Are they qualified experts?</li>
-            <li><strong>Sponsorship:</strong> Does the organization have a bias, or do they hold proven credibility?</li>
-            <li><strong>Recency:</strong> Always inspect copyright or update dates. Never cite stale statistics!</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="checklist-card">
-            <h3>Evaluation Checklist</h3>
-            <div class="check-row"><span>✓</span> Clearly identified expert author</div>
-            <div class="check-row"><span>✓</span> Reputable & non-partisan sponsor</div>
-            <div class="check-row"><span>✓</span> Up-to-date publication timestamp</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 9: NHƯ MỘNG & H’THẢO -->
-    <section class="slide" id="slide-9">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 4: RESEARCH INTERVIEW</div>
-          <h2 class="slide-title">Three Stages of Effective Interviewing</h2>
-          <div class="speaker-name">Speakers: <strong>Như Mộng & H’Thảo</strong></div>
-          <ul class="bullet-points">
-            <li><strong>Before:</strong> Define clear purpose, choose right experts, secure consent to record, prep questions.</li>
-            <li><strong>During:</strong> Arrive promptly, restate objective, listen closely, take careful manual notes.</li>
-            <li><strong>After:</strong> Review immediately, transcribe in standardized format, organize accurate quotes.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="timeline-container">
-            <div class="step-badge">1. BEFORE: Purpose & Prep</div>
-            <div class="step-badge">2. DURING: Listen & Notes</div>
-            <div class="step-badge">3. AFTER: Transcribe Promptly</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 10: DƯƠNG QUỲNH (TIPS) -->
-    <section class="slide" id="slide-10">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 5: RESEARCH TIPS</div>
-          <h2 class="slide-title">Start Early & Preliminary Bibliography</h2>
-          <div class="speaker-name">Speaker: <strong>Dương Quỳnh</strong></div>
-          <ul class="bullet-points">
-            <li><strong>Start Early:</strong> Research always takes longer than expected; give yourself time to solve roadblocks.</li>
-            <li><strong>Preliminary Bibliography:</strong> Jot down every potential source (15–20 candidates).</li>
-            <li><strong>Filter Down:</strong> Whittle down to 7–8 high-impact sources for the final speech.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="ratio-box">
-            <div class="number">15–20</div>
-            <div class="label">Initial Sources Logged</div>
-            <div class="arrow">↓</div>
-            <div class="number gold">7–8</div>
-            <div class="label">Verified Sources Cited</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 11: THẾ THUẬN (NOTE-TAKING) -->
-    <section class="slide" id="slide-11">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 5: NOTE-TAKING EFFICIENCY</div>
-          <h2 class="slide-title">"Messy Notes = Fluffy Speeches"</h2>
-          <div class="speaker-name">Speaker: <strong>Thế Thuận</strong></div>
-          <ul class="bullet-points">
-            <li><strong>1. Over-note:</strong> Don't trust fleeting memory. If there's 5% chance you need it, write it down.</li>
-            <li><strong>2. 3-Part Format:</strong> Topic Tag + Abbreviated Source + The Fact.</li>
-            <li><strong>3. One Idea = One Note:</strong> Keep facts like Lego blocks to rearrange effortlessly.</li>
-            <li><strong>4. Draw the Line:</strong> Slap quotes on verbatim words immediately to kill accidental plagiarism.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="image-box">
-            <!-- Thay bằng ảnh mockup 4 principles của bạn -->
-            <img src="images/the-thuan-note-taking.png" alt="Four Principles of Effective Note Taking" onerror="this.src='https://placehold.co/900x500/0f172a/ffffff?text=4+Principles:+Over-note+|+3-Part+Format+|+One+Idea+|+Draw+the+Line'">
-            <div class="image-caption">Four Principles for More Effective Note-Taking</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 12: PHI VÂN -->
-    <section class="slide" id="slide-12">
-      <div class="slide-content split-layout">
-        <div class="text-pane">
-          <div class="section-tag">PART 5: CRITICAL THINKING</div>
-          <h2 class="slide-title">Think About Materials As You Research</h2>
-          <div class="speaker-name">Speaker: <strong>Phi Vân</strong></div>
-          <ul class="bullet-points">
-            <li><strong>Not Just Assembly:</strong> Research isn't just copy-pasting what already aligns with your opinion.</li>
-            <li><strong>Stay Open-Minded:</strong> Allow new evidence to challenge, expand, or pivot your initial perspective.</li>
-            <li><strong>Insight Over Routine:</strong> Critical reflection is what transforms raw data into intellectual impact.</li>
-          </ul>
-        </div>
-        <div class="visual-pane">
-          <div class="quote-card">
-            <p>“Research is not just about finding info to support what we already believe. It's about being open to challenge and evolve our thinking.”</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 13: CONCLUSION & Q&A -->
-    <section class="slide" id="slide-13">
-      <div class="slide-content intro-layout">
-        <div class="badge">FINAL TAKEAWAY</div>
-        <h1 class="main-title">FACTS OVER FLUFF</h1>
-        <p class="subtitle">Solid Preparation • Trusted Evidence • Confident Delivery</p>
-        <div class="qa-badge">Open for Q&A</div>
       </div>
     </section>
 
   </main>
-
-  <!-- Presenter Floating Controls -->
-  <aside class="presenter-controls">
-    <button id="btn-prev" title="Previous Slide (Left Arrow)">❮</button>
-    <button id="btn-next" title="Next Slide (Right Arrow / Space)">❯</button>
-    <button id="btn-fullscreen" title="Toggle Fullscreen (F)">⛶</button>
-  </aside>
 
   <script src="script.js"></script>
 </body>
